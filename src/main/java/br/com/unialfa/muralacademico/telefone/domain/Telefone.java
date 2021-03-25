@@ -1,9 +1,8 @@
 package br.com.unialfa.muralacademico.telefone.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import br.com.unialfa.muralacademico.pessoa.domain.Pessoa;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -17,6 +16,9 @@ public class Telefone implements Serializable {
     private String numero;
     private TelefoneTipo tipo;
     private int versao;
+
+    @ManyToOne
+    private Pessoa pessoa;
 
     public Telefone() {
     }

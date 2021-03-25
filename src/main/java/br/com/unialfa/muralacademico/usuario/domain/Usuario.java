@@ -1,5 +1,8 @@
 package br.com.unialfa.muralacademico.usuario.domain;
 
+import br.com.unialfa.muralacademico.palestrante.domain.Palestrante;
+import br.com.unialfa.muralacademico.pessoa.domain.Pessoa;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -14,6 +17,13 @@ public class Usuario implements Serializable {
     private String usuario;
     private String senha;
     private int versao;
+
+    @OneToOne
+    @JoinColumn
+    private Pessoa pessoa;
+
+    @OneToOne
+    private Palestrante palestrante;
 
     public Usuario() {
     }

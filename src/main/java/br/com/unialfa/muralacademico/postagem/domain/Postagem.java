@@ -1,9 +1,10 @@
 package br.com.unialfa.muralacademico.postagem.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import br.com.unialfa.muralacademico.categoria.domain.Categoria;
+import br.com.unialfa.muralacademico.curso.domain.Curso;
+import br.com.unialfa.muralacademico.palestrante.domain.Palestrante;
+
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -15,7 +16,19 @@ public class Postagem implements Serializable {
     private long id;
     private String conteudo;
     private LocalDate data;
+    private Nivel nivel;
     private int versao;
+
+    @OneToOne
+    @JoinColumn
+    private Palestrante palestrante;
+
+    @OneToOne
+    private Curso curso;
+
+    @OneToOne
+    private Categoria categoria;
+
 
     public Postagem() {
     }

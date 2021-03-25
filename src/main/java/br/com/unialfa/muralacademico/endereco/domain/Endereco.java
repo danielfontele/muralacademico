@@ -1,11 +1,12 @@
 package br.com.unialfa.muralacademico.endereco.domain;
 
+import br.com.unialfa.muralacademico.pessoa.domain.Pessoa;
 import jdk.jfr.Enabled;
+import org.hibernate.annotations.Cascade;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Enabled
 public class Endereco implements Serializable {
@@ -13,6 +14,10 @@ public class Endereco implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    @Column(unique = true)
+    private String cep;
+
     private String rua;
     private String numero;
     private String complemento;
@@ -20,6 +25,9 @@ public class Endereco implements Serializable {
     private String cidade;
     private String estado;
     private int versao;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Pessoa pessoa;
 
     public Endereco() {
     }

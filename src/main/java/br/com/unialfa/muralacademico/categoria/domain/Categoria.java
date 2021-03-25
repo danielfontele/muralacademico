@@ -1,5 +1,7 @@
 package br.com.unialfa.muralacademico.categoria.domain;
 
+import br.com.unialfa.muralacademico.postagem.domain.Postagem;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -13,6 +15,10 @@ public class Categoria implements Serializable {
     @Column(unique = true)
     private String nome;
     private int versao;
+
+    @OneToOne
+    @JoinColumn
+    private Postagem postagem;
 
     public Categoria() {
     }

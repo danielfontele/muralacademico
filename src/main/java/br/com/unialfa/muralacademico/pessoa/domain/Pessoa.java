@@ -1,10 +1,12 @@
 package br.com.unialfa.muralacademico.pessoa.domain;
 
 import br.com.unialfa.muralacademico.telefone.domain.Telefone;
+import br.com.unialfa.muralacademico.usuario.domain.Usuario;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Pessoa implements Serializable {
@@ -18,6 +20,15 @@ public class Pessoa implements Serializable {
     private String CPF;
     private String email;
     private int versao;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Telefone> telefones;
+
+    @ManyToOne
+    private Telefone telefone;
+
+    @OneToOne
+    private Usuario usuario;
 
     public Pessoa() {
     }
