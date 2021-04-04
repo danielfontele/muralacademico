@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
-@Enabled
+@Entity
 public class Endereco implements Serializable {
 
     @Id

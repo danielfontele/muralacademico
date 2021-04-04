@@ -5,6 +5,7 @@ import br.com.unialfa.muralacademico.usuario.domain.Usuario;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 public class Palestrante extends Usuario implements Serializable {
@@ -13,12 +14,8 @@ public class Palestrante extends Usuario implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @OneToOne
-    @JoinColumn
-    private Usuario usuario;
-
-    @OneToOne
-    private Postagem postagem;
+    @OneToMany
+    private List<Postagem> postagem;
 
     public Palestrante() {
     }

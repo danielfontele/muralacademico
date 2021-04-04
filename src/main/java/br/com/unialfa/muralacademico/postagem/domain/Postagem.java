@@ -7,6 +7,7 @@ import br.com.unialfa.muralacademico.palestrante.domain.Palestrante;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 public class Postagem implements Serializable {
@@ -19,8 +20,7 @@ public class Postagem implements Serializable {
     private Nivel nivel;
     private int versao;
 
-    @OneToOne
-    @JoinColumn
+    @ManyToOne (cascade = CascadeType.ALL)
     private Palestrante palestrante;
 
     @OneToOne
