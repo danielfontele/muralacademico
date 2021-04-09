@@ -22,14 +22,29 @@ import java.util.List;
 @SpringBootApplication
 public class MuralacademicoApplication {
 
+    @Autowired
+    private CategoriaRepository categoriaRepository;
+
+    @Autowired
+    private CursoRepository cursoRepository;
+
+    @Autowired
+    private EnderecoRepository enderecoRepository;
+
+    @Autowired
+    private PalestranteRepository palestranteRepository;
+
+    @Autowired
+    private PessoaRepository pessoaRepository;
+
 	@Autowired
 	private PostagemRepository postagemRepository;
 
-	//@Autowired
-	//private TelefoneRepository telefoneRepository;
+	@Autowired
+	private TelefoneRepository telefoneRepository;
 
-	//@Autowired
-	//private UsuarioRepository usuarioRepository;
+	@Autowired
+	private UsuarioRepository usuarioRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(MuralacademicoApplication.class, args);
