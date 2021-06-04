@@ -1,12 +1,9 @@
 package br.com.unialfa.muralacademico.endereco.domain;
 
 import br.com.unialfa.muralacademico.pessoa.domain.Pessoa;
-import jdk.jfr.Enabled;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 public class Endereco implements Serializable {

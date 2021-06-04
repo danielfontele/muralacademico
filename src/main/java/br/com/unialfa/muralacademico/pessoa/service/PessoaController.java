@@ -3,7 +3,9 @@ package br.com.unialfa.muralacademico.pessoa.service;
 import br.com.unialfa.muralacademico.pessoa.business.PessoaBusiness;
 import br.com.unialfa.muralacademico.pessoa.domain.Pessoa;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,8 +21,13 @@ public class PessoaController {
     }
 
     @PostMapping(path = "/add")
-    public void cadastrarPessoa( @RequestBody Pessoa pessoa ) {
-        pessoaBusiness.cadastrarPessoa(pessoa);
+    public ResponseEntity<?> cadastrarPessoa(@RequestBody Pessoa pessoa ) {
+        try {
+            pessoaBusiness.cadastrarPessoa(pessoa);
+            return new ResponseEntity<>(pessoa, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e, HttpStatus.BAD_REQUEST);
+        }
     }
 
     @PutMapping(path = "/edit")

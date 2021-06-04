@@ -1,0 +1,287 @@
+############################################
+################ CATEGORIA #################
+############################################
+
+GET http://localhost:9000/api/categoria/
+
+##
+
+POST http://localhost:9000/api/categoria/add
+Content-Type: application/json
+
+{
+    "nome": "",
+    "versao": 
+}
+
+##
+
+PUT http://localhost:9000/api/categoria/edit
+Content-Type: application/json
+
+{
+    "id": ,
+    "nome": "",
+    "versao": 
+}
+
+##
+
+DELETE http://localhost:9000/api/categoria/delete/id
+
+###
+
+############################################
+################ Curso #####################
+############################################
+
+GET http://localhost:9000/api/curso/
+
+##
+
+POST http://localhost:9000/api/curso/add
+Content-Type: application/json
+
+{
+    "nome": "",
+    "versao": 
+}
+
+##
+
+PUT http://localhost:9000/api/curso/edit
+Content-Type: application/json
+
+{
+    "id": ,
+    "nome": "",
+    "versao": 
+}
+
+##
+
+DELETE http://localhost:9000/api/curso/delete/id
+
+###
+
+############################################
+################ Endereco ##################
+############################################
+
+GET http://localhost:9000/api/endereco/
+
+##
+
+POST http://localhost:9000/api/endereco/add
+Content-Type: application/json
+
+{
+    "rua": "",
+    "numero": "",
+    "complemento": "",
+    "bairro": "",
+    "cidade": "",
+    "estado": "",
+    "versao": 
+}
+
+##
+
+PUT http://localhost:9000/api/endereco/edit
+Content-Type: application/json
+
+{
+    "id": ,
+    "rua": "",
+    "numero": "",
+    "complemento": "",
+    "bairro": "",
+    "cidade": "",
+    "estado": "",
+    "versao": 
+}
+
+##
+
+DELETE http://localhost:9000/api/endereco/delete/id
+
+###
+
+############################################
+################ Palestrante ###############
+############################################
+
+GET http://localhost:9000/api/palestrante/
+
+##
+
+POST http://localhost:9000/api/palestrante/add
+Content-Type: application/json
+
+{
+    "usuario": "",
+    "senha": "",
+    "versao": 
+}
+
+##
+
+PUT http://localhost:9000/api/palestrante/edit
+Content-Type: application/json
+
+{
+    "id": ,
+    "usuario": "",
+    "senha": "",
+    "versao": 
+}
+
+##
+
+DELETE http://localhost:9000/api/palestrante/delete/id
+
+###
+
+############################################
+################ Pessoa ####################
+############################################
+
+GET http://localhost:9000/api/pessoa/
+
+##
+
+POST http://localhost:9000/api/pessoa/add
+Content-Type: application/json
+
+{
+    "nome": "",
+    "cpf": "",
+    "email": "",
+    "versao": 
+}
+
+##
+
+PUT http://localhost:9000/api/pessoa/edit
+Content-Type: application/json
+
+{
+    "id": ,
+    "nome": "",
+    "cpf": "",
+    "email": "",
+    "versao": 
+}
+
+##
+
+DELETE http://localhost:9000/api/pessoa/delete/id
+
+###
+
+############################################
+################ Postagem ##################
+############################################
+
+GET http://localhost:9000/api/postagem/
+
+##
+
+POST http://localhost:9000/api/postagem/add
+Content-Type: application/json
+
+{
+    "conteudo": "",
+    "data": "",
+    "versao": 
+}
+
+##
+
+PUT http://localhost:9000/api/postagem/edit
+Content-Type: application/json
+
+{
+    "id": ,
+    "conteudo": "",
+    "data": "",
+    "versao": 
+}
+
+##
+
+DELETE http://localhost:9000/api/postagem/delete/id
+
+###
+
+############################################
+################ Telefone ##################
+############################################
+
+GET http://localhost:9000/api/telefone/
+
+##
+
+POST http://localhost:9000/api/telefone/add
+Content-Type: application/json
+
+{
+    "codigoArea": "",
+    "ddd": "",
+    "numero": "",
+    "versao": 
+}
+
+##
+
+PUT http://localhost:9000/api/telefone/edit
+Content-Type: application/json
+
+{
+    "id": ,
+    "codigoArea": "",
+    "numero": "",
+    "versao": ,
+    "ddd": ""
+}
+
+##
+
+DELETE http://localhost:9000/api/telefone/delete/id
+
+###
+
+############################################
+################ Usuario ###################
+############################################
+
+GET http://localhost:9000/api/usuario/
+
+##
+
+POST http://localhost:9000/api/usuario/add
+Content-Type: application/json
+
+{
+    "usuario": "daniel",
+    "senha": "1234",
+    "versao": 1
+}
+
+
+##
+
+PUT http://localhost:9000/api/usuario/edit
+Content-Type: application/json
+
+{
+    "usuairo": "user",
+    "senha": "user",
+    "versao": 1
+}
+
+##
+
+DELETE http://localhost:9000/api/usuario/delete/id
+
+###

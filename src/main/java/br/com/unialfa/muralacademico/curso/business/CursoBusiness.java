@@ -1,6 +1,5 @@
 package br.com.unialfa.muralacademico.curso.business;
 
-import br.com.unialfa.muralacademico.categoria.domain.Categoria;
 import br.com.unialfa.muralacademico.curso.domain.Curso;
 import br.com.unialfa.muralacademico.curso.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;

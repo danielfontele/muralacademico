@@ -1,6 +1,5 @@
 package br.com.unialfa.muralacademico.telefone.business;
 
-import br.com.unialfa.muralacademico.postagem.domain.Postagem;
 import br.com.unialfa.muralacademico.telefone.domain.Telefone;
 import br.com.unialfa.muralacademico.telefone.repository.TelefoneRepository;
 import org.springframework.beans.factory.annotation.Autowired;

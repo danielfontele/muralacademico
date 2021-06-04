@@ -5,7 +5,6 @@ import br.com.unialfa.muralacademico.usuario.domain.Usuario;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity

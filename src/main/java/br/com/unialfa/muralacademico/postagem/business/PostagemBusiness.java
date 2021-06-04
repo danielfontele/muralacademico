@@ -1,6 +1,5 @@
 package br.com.unialfa.muralacademico.postagem.business;
 
-import br.com.unialfa.muralacademico.pessoa.domain.Pessoa;
 import br.com.unialfa.muralacademico.postagem.domain.Postagem;
 import br.com.unialfa.muralacademico.postagem.repository.PostagemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +24,7 @@ public class PostagemBusiness {
         postagemRepository.save(postagem);
     }
 
-    public @ResponseBody
-    void deletarPostagem (long id ) {
+    public @ResponseBody void deletarPostagem(long id) {
         postagemRepository.deleteById(id);
     }
 }

@@ -7,7 +7,6 @@ import br.com.unialfa.muralacademico.palestrante.domain.Palestrante;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 public class Postagem implements Serializable {
@@ -20,7 +19,7 @@ public class Postagem implements Serializable {
     private Nivel nivel;
     private int versao;
 
-    @ManyToOne (cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     private Palestrante palestrante;
 
     @OneToOne
@@ -28,7 +27,6 @@ public class Postagem implements Serializable {
 
     @OneToOne
     private Categoria categoria;
-
 
     public Postagem() {
     }
@@ -64,4 +62,37 @@ public class Postagem implements Serializable {
     public void setVersao(int versao) {
         this.versao = versao;
     }
+
+    public Nivel getNivel() {
+        return this.nivel;
+    }
+
+    public void setNivel(Nivel nivel) {
+        this.nivel = nivel;
+    }
+
+    public Palestrante getPalestrante() {
+        return this.palestrante;
+    }
+
+    public void setPalestrante(Palestrante palestrante) {
+        this.palestrante = palestrante;
+    }
+
+    public Curso getCurso() {
+        return this.curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
+
+    public Categoria getCategoria() {
+        return this.categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
 }
